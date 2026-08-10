@@ -3,96 +3,534 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>The Olive Table | Islamabad</title>
+
+    <meta name="description"
+          content="The Olive Table — a modern dining experience in Islamabad with fresh ingredients, delicious food and unforgettable moments.">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">The Olive Table</div>
+    <!-- ================= HEADER ================= -->
 
-            <ul>
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                The Olive Table
+            </a>
+
+            <button class="menu-toggle" aria-label="Open navigation">
+                ☰
+            </button>
+
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
         </nav>
+
     </header>
+
+
+    <!-- ================= HERO ================= -->
 
     <main>
 
         <section id="home" class="hero">
+
             <div class="hero-content">
-                <p class="small-title">WELCOME TO</p>
+
+                <p class="small-heading">WELCOME TO</p>
+
                 <h1>The Olive Table</h1>
 
-                <p>
+                <p class="hero-text">
                     A modern dining experience in the heart of Islamabad.
                     Fresh ingredients, delicious food and unforgettable moments.
                 </p>
 
-                <a href="#menu" class="button">Explore Our Menu</a>
-            </div>
-        </section>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">
+                        Explore Our Menu
+                    </a>
 
-        <section id="about" class="about">
-            <h2>About Us</h2>
-
-            <p>
-                At The Olive Table, we believe great food brings people together.
-                Our kitchen combines fresh ingredients with modern flavours to
-                create dishes you'll want to come back for.
-            </p>
-        </section>
-
-        <section id="menu" class="menu">
-            <h2>Our Favorites</h2>
-
-            <div class="menu-container">
-
-                <div class="menu-card">
-                    <h3>Classic Pasta</h3>
-                    <p>Creamy homemade pasta with fresh herbs.</p>
-                    <span>Rs. 1,250</span>
-                </div>
-
-                <div class="menu-card">
-                    <h3>Grilled Chicken</h3>
-                    <p>Juicy grilled chicken served with seasonal vegetables.</p>
-                    <span>Rs. 1,450</span>
-                </div>
-
-                <div class="menu-card">
-                    <h3>Olive Special Pizza</h3>
-                    <p>Our signature pizza with premium toppings.</p>
-                    <span>Rs. 1,600</span>
+                    <a href="#contact" class="btn btn-secondary">
+                        Reserve a Table
+                    </a>
                 </div>
 
             </div>
+
         </section>
 
-        <section id="contact" class="contact">
-            <h2>Visit Us</h2>
 
-            <p>📍 Islamabad, Pakistan</p>
-            <p>📞 +92 300 0000000</p>
-            <p>✉️ hello@theolivetable.com</p>
+        <!-- ================= ABOUT ================= -->
 
-            <a href="https://wa.me/923000000000" class="button">
-                Contact on WhatsApp
-            </a>
+        <section id="about" class="section about">
+
+            <div class="section-heading">
+                <p class="eyebrow">OUR STORY</p>
+                <h2>About Us</h2>
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-text">
+
+                    <p>
+                        At The Olive Table, we believe great food brings
+                        people together.
+                    </p>
+
+                    <p>
+                        Our kitchen combines fresh ingredients with modern
+                        flavours to create dishes you'll want to come back for.
+                    </p>
+
+                    <p>
+                        Whether you're joining us for a family dinner,
+                        a celebration or a quiet evening, we're here to
+                        make every visit special.
+                    </p>
+
+                </div>
+
+                <div class="about-box">
+
+                    <span>🍽️</span>
+
+                    <h3>Fresh • Delicious • Memorable</h3>
+
+                    <p>
+                        Good food. Good people. Great memories.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MENU ================= -->
+
+        <section id="menu" class="section menu-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">OUR MENU</p>
+
+                <h2>Our Favorites</h2>
+
+                <p>
+                    A selection of dishes made with fresh ingredients
+                    and lots of love.
+                </p>
+
+            </div>
+
+
+            <div class="menu-grid">
+
+                <!-- ITEM 1 -->
+
+                <article class="food-card">
+
+                    <div class="food-image pasta-image">
+                        <span>🍝</span>
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="food-title">
+                            <h3>Classic Pasta</h3>
+                            <span>Rs. 1,250</span>
+                        </div>
+
+                        <p>
+                            Creamy homemade pasta with fresh herbs
+                            and our special sauce.
+                        </p>
+
+                        <button class="order-button"
+                                onclick="orderItem('Classic Pasta')">
+                            Order
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ITEM 2 -->
+
+                <article class="food-card">
+
+                    <div class="food-image chicken-image">
+                        <span>🍗</span>
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="food-title">
+                            <h3>Grilled Chicken</h3>
+                            <span>Rs. 1,450</span>
+                        </div>
+
+                        <p>
+                            Juicy grilled chicken served with
+                            seasonal vegetables.
+                        </p>
+
+                        <button class="order-button"
+                                onclick="orderItem('Grilled Chicken')">
+                            Order
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ITEM 3 -->
+
+                <article class="food-card">
+
+                    <div class="food-image pizza-image">
+                        <span>🍕</span>
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="food-title">
+                            <h3>Olive Special Pizza</h3>
+                            <span>Rs. 1,600</span>
+                        </div>
+
+                        <p>
+                            Crispy pizza topped with fresh vegetables,
+                            cheese and our signature flavours.
+                        </p>
+
+                        <button class="order-button"
+                                onclick="orderItem('Olive Special Pizza')">
+                            Order
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ITEM 4 -->
+
+                <article class="food-card">
+
+                    <div class="food-image burger-image">
+                        <span>🍔</span>
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="food-title">
+                            <h3>Olive Burger</h3>
+                            <span>Rs. 1,350</span>
+                        </div>
+
+                        <p>
+                            A juicy gourmet burger with fresh salad,
+                            cheese and special sauce.
+                        </p>
+
+                        <button class="order-button"
+                                onclick="orderItem('Olive Burger')">
+                            Order
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ITEM 5 -->
+
+                <article class="food-card">
+
+                    <div class="food-image salad-image">
+                        <span>🥗</span>
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="food-title">
+                            <h3>Garden Fresh Salad</h3>
+                            <span>Rs. 850</span>
+                        </div>
+
+                        <p>
+                            Fresh seasonal vegetables with our
+                            homemade dressing.
+                        </p>
+
+                        <button class="order-button"
+                                onclick="orderItem('Garden Fresh Salad')">
+                            Order
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ITEM 6 -->
+
+                <article class="food-card">
+
+                    <div class="food-image dessert-image">
+                        <span>🍰</span>
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="food-title">
+                            <h3>Chocolate Dessert</h3>
+                            <span>Rs. 650</span>
+                        </div>
+
+                        <p>
+                            Rich chocolate dessert served with
+                            our signature finishing touch.
+                        </p>
+
+                        <button class="order-button"
+                                onclick="orderItem('Chocolate Dessert')">
+                            Order
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SPECIAL OFFER ================= -->
+
+        <section class="special-section">
+
+            <div class="special-content">
+
+                <p class="eyebrow">TODAY'S SPECIAL</p>
+
+                <h2>Good Food Deserves Good Company</h2>
+
+                <p>
+                    Come together, enjoy delicious food and
+                    make memories around the table.
+                </p>
+
+                <a href="#contact" class="btn btn-primary">
+                    Visit The Olive Table
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GALLERY ================= -->
+
+        <section id="gallery" class="section gallery-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">OUR SPACE</p>
+
+                <h2>Gallery</h2>
+
+                <p>
+                    A warm and welcoming place to enjoy great food.
+                </p>
+
+            </div>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    <span>🍽️</span>
+                    <p>Dining</p>
+                </div>
+
+                <div class="gallery-item">
+                    <span>🥘</span>
+                    <p>Fresh Food</p>
+                </div>
+
+                <div class="gallery-item">
+                    <span>☕</span>
+                    <p>Coffee & Dessert</p>
+                </div>
+
+                <div class="gallery-item">
+                    <span>🥂</span>
+                    <p>Special Moments</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="section contact-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">GET IN TOUCH</p>
+
+                <h2>Visit Us</h2>
+
+                <p>
+                    We'd love to welcome you at The Olive Table.
+                </p>
+
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+
+                    <span class="contact-icon">📍</span>
+
+                    <h3>Location</h3>
+
+                    <p>
+                        Islamabad, Pakistan
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <span class="contact-icon">📞</span>
+
+                    <h3>Phone</h3>
+
+                    <p>
+                        +92 XXX XXXXXXX
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <span class="contact-icon">🕐</span>
+
+                    <h3>Opening Hours</h3>
+
+                    <p>
+                        Monday – Sunday
+                        <br>
+                        12:00 PM – 11:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>
 
-    <footer>
-        <p>© 2026 The Olive Table. All rights reserved.</p>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <h2>The Olive Table</h2>
+
+            <p>
+                Fresh food. Great company. Unforgettable moments.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+            <p class="copyright">
+                © <span id="year"></span> The Olive Table. All rights reserved.
+            </p>
+
+        </div>
+
     </footer>
 
-    <script src="script.js"></script>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Automatically show the current year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        // Mobile navigation
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", function () {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        // Close mobile menu after clicking a link
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navLinks.classList.remove("active");
+
+            });
+
+        });
+
+
+        // Order button
+        function orderItem(itemName) {
+
+            alert(
+                "Thank you for choosing The Olive Table!\\n\\n" +
+                "You selected: " + itemName +
+                "\\n\\nOur online ordering system will be connected here."
+            );
+
+        }
+
+    </script>
 
 </body>
 </html>
